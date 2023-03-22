@@ -27,8 +27,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "AtomicSynchronizer.h"
 #include "CoherenceNode.h"
 #include <VisualizerWindowHeaders.h>
-//#include "../../Processors/Visualization/MatlabLikePlot.h"
-#include "../../Source/Processors/Visualization/MatlabLikePlot.h"
+
+#include "../../Source/Processors/Visualization/InteractivePlot.h"
 class VerticalGroupSet : public Component
 {
 public:
