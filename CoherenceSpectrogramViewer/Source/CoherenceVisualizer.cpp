@@ -304,7 +304,7 @@ CoherenceVisualizer::CoherenceVisualizer(CoherenceNode* n)
 	columnTwoSet->addGroup({ foiLabel, fstartLabel, fstartEditable, fendLabel, fendEditable, fstepLabel, fstepEditable });
 	// ------- Plot ------- //
 	int col3 = 330;
-	cohPlot = new MatlabLikePlot();
+	cohPlot = new InteractivePlot();
 	cohPlot->setBounds(bounds = { 330, 55, 600, 500 });
 	//cohPlot->setAuxiliaryString("Coherence scaled from 0-100"); //Confusing with the base string on the graph.
 	cohPlot->setTitle("Coherence vs Frequency");
@@ -321,7 +321,7 @@ CoherenceVisualizer::CoherenceVisualizer(CoherenceNode* n)
 	for (int i = 0; i < NumOfChanChan; ++i)
 	{
 		processor->TotalNumofChannels.add(i);
-		plotHoldingVect.push_back(new MatlabLikePlot());
+		plotHoldingVect.push_back(new InteractivePlot());
 		String Idchn = "#" + std::to_string(i + 1);
 		plotHoldingVect[i]->setTitle("Power vs Frequency: CH" + Idchn);
 		plotHoldingVect[i]->setRange(freqStart, freqEnd, -100, 20000, true);
