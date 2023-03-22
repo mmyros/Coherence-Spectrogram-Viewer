@@ -60,15 +60,15 @@ public:
 
 	AudioProcessorEditor* createEditor() override;
 
-	void createEventChannels() override;
+	void createEventChannels();
 
 	void setParameter(int parameterIndex, float newValue) override;
 
 	void process(AudioSampleBuffer& continuousBuffer) override;
 
-	bool isReady() override;
-	bool enable() override;
-	bool disable() override;
+//	bool isReady() override;
+//	bool enable() override;
+//	bool disable() override;
 
 	// thread function - coherence calculation
 	void run() override;

@@ -45,7 +45,7 @@ CoherenceNode::CoherenceNode()
 	, nSamplesWait(0)
     , WhatisIT(1)
 {
-	setProcessorType(PROCESSOR_TYPE_SINK);
+	setProcessorType(Plugin::Processor::SINK);
 }
 
 CoherenceNode::~CoherenceNode()
@@ -56,8 +56,8 @@ void CoherenceNode::createEventChannels()
 
 AudioProcessorEditor* CoherenceNode::createEditor()
 {
-	editor = new CoherenceEditor(this);
-	return editor;
+	
+	return new CoherenceEditor(this);
 }
 
 void CoherenceNode::process(AudioSampleBuffer& continuousBuffer)

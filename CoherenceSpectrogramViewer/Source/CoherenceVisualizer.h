@@ -63,8 +63,8 @@ public:
 	void refresh() override;
 	void beginAnimation() override;
 	void endAnimation() override;
-	void setParameter(int, float) override;
-	void setParameter(int, int, int, float) override;
+//	void setParameter(int, float) override;
+//	void setParameter(int, int, int, float) override;
 	void comboBoxChanged(ComboBox* comboBoxThatHasChanged) override;
 	void labelTextChanged(Label* labelThatHasChanged) override;
 	void buttonEvent(Button* buttonEvent);
@@ -76,8 +76,8 @@ public:
 	void channelChanged(int chan, bool newState);
 
 
-	void saveVisualizerParameters(XmlElement* xml) override;
-	void loadVisualizerParameters(XmlElement* xml) override;
+//	void saveVisualizerParameters(XmlElement* xml) override;
+//	void loadVisualizerParameters(XmlElement* xml) override;
 
 private:
 	// Update list of combinations to choose to graph.
@@ -151,7 +151,7 @@ private:
 	int freqStart;
 	int freqEnd;
 
-	ScopedPointer<MatlabLikePlot> cohPlot;
+	ScopedPointer<InteractivePlot> cohPlot;
 	std::vector<double> coherence;
 	std::vector<std::vector<float>> coh;
 
@@ -159,7 +159,7 @@ private:
 	ScopedPointer<ToggleButton> CoherenceViewer;
 	ScopedPointer<ToggleButton> SpectrogramViewer;
 	ScopedPointer<Label> SpecCalText;
-	std::vector<ScopedPointer<MatlabLikePlot>> plotHoldingVect;
+	std::vector<ScopedPointer<InteractivePlot>> plotHoldingVect;
 	bool firstBegin = true;
 
 	/*End*/
